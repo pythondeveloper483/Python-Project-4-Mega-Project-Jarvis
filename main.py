@@ -1,16 +1,15 @@
 import speech_recognition as sr
 import webbrowser
-import pyttsx3
+import win32com.client as wincl  # Native Windows voice
 import time
 import musicLibrary
 
-# Initialize recognizer and speech engine
+# Initialize recognizer and Windows voice engine
 recognizer = sr.Recognizer()
-engine = pyttsx3.init()
+speaker = wincl.Dispatch("SAPI.SpVoice")
 
 def speak(text):
-    engine.say(text)
-    engine.runAndWait()
+    speaker.Speak(text)
 
 def processCommand(c):
     c = c.lower()
@@ -27,7 +26,7 @@ def processCommand(c):
         speak("Opening LinkedIn")
         webbrowser.open("https://linkedin.com")
     elif "open monkeytype" in c:
-        speak("Opening Mokeytype")
+        speak("Opening Monkeytype")
         webbrowser.open("https://monkeytype.com/profile/SEE_Shashank")
     elif "open github" in c:
         speak("Opening GitHub")
