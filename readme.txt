@@ -1,2 +1,2 @@
 To use this, Jarvis at first you must run the python file and You should wait for it When He say Initializing Jarvis then You should wait for a moment untill not showing "Listening for wake word" Then Say Jarvis When it activates in the terminal showing "Jarvis Active" then Say commands: "Open google", "Open Facebook", "Open Github", "Play old version", "Play believer".
-He is able to open websites mention in the code and play songs mention in the musicLibrary.
+He is able to open websites mention in the code and play songs mention in the musicLibrary.-
